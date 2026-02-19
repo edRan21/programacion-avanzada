@@ -96,13 +96,39 @@ class Tesis extends Libro{
     public String carreras;
     
     public void leerAsesor(){
-        
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese el nombre del Asesor: ");
+        asesor= leer.nextLine();
+    }
+    
+    public void leerCoAsesor(){
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese el nombre del Co-asesor: ");
+        coAsesor= leer.nextLine();
+    }
+    
+    public void leerCarreras(){
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese la carrera: ");
+        carreras = leer.nextLine();
+    }
+    
+    public void escribirAsesor(){
+        System.out.println("El Aseosr es: "+ asesor);
+    }
+    
+    public void escribirCoAsesor(){
+        System.out.println("El co Asesor es: "+ coAsesor);
+    }
+    
+    public void escribirCarreras(){
+        System.out.println("La carrera de la tesis es: "+ carreras);
     }
 }
 
 public class PracticaHerencia {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+         = new Libro();
     }
 }
