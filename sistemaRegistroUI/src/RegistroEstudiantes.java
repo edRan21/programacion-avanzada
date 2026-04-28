@@ -25,6 +25,12 @@ public class RegistroEstudiantes {
     private JTextField textDireccion;
     private JTextField textTelefono;
     private JButton btnGuardarAlta;
+    private JList listEstudiantes;
+    private JButton btnBaja;
+    private JTextField textID_baja;
+    private JTable tabla_estudiantes;
+    private JTextField textBusquedaMatricula;
+    private JButton btnBusqueda;
 
     // constructor de la ventana, si se llama el método se abre la ventana | se definien las propiedades de la ventana
     public RegistroEstudiantes() {
@@ -43,7 +49,7 @@ public class RegistroEstudiantes {
             cardLayout.show(info_cuadro, "Alta");
         });
 
-        // 3. Registro: El NUEVO botón lee las cajas y guarda al estudiante
+        // Registro: El botón lee los registro y guarda al estudiante
         btnGuardarAlta.addActionListener(e -> {
             try {
                 String nombreIngresado = textNombre.getText();
@@ -79,6 +85,10 @@ public class RegistroEstudiantes {
                 // Previene que el programa explote si dejan el promedio vacío o ponen letras
                 JOptionPane.showMessageDialog(null, "Error: El promedio debe ser un número válido.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
             }
+        });
+
+        BAJAESTUDIANTE.addActionListener(e -> {
+            cardLayout.show(info_cuadro, "Baja");
         });
     }
     public static void main(String[] args) {
